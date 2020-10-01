@@ -8,8 +8,8 @@ import {
 } from 'vue-demi';
 import {NOOP} from '@vue/shared';
 
-import * as Vue from 'vue-demi';
-let isVue2 = !!Vue.use;
+import * as VueDemi from 'vue-demi';
+let isVue2 = !!VueDemi.onServerPrefetch;
 
 let component = defineComponent({
 	name: 'VueResizeSensor',
