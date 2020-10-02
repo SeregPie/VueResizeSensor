@@ -1,15 +1,14 @@
 import {
 	defineComponent,
 	h,
+	isVue2,
 	onActivated,
 	onMounted,
 	ref,
+	Vue,
 	watch,
 } from 'vue-demi';
 import {NOOP} from '@vue/shared';
-
-import * as VueDemi from 'vue-demi';
-let isVue2 = !!VueDemi.onServerPrefetch;
 
 let component = defineComponent({
 	name: 'VueResizeSensor',
@@ -95,11 +94,8 @@ let component = defineComponent({
 	},
 });
 
-if (isVue2) {
-	let {Vue} = globalThis;
-	if (Vue) {
-		Vue.component(component.name, component);
-	}
+if (isVue2 && globalThis.window) {
+	Vue.component(component.name, component);
 }
 
 export default component;
