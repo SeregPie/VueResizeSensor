@@ -2,7 +2,11 @@
 
 A container that supports the resize event. It contains an absolute positioned `<iframe>` element. An inline frame supports the resize event natively. Every time the container resizes, it triggers the resize event of the contained inline frame and the event handler of the inline frame triggers the resize event of the container.
 
-Works for Vue 2 & 3 by the power of [Vue Demi](https://github.com/antfu/vue-demi)!
+Works for Vue 2 & 3.
+
+## dependencies
+
+- [Vue Demi](https://github.com/antfu/vue-demi)
 
 ## setup
 
