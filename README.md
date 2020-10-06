@@ -16,34 +16,6 @@ Works for Vue 2 & 3.
 npm i @seregpie/vue-resize-sensor
 ```
 
-### ES module
-
-Register the component globally.
-
-```javascript
-import {createApp} from 'vue';
-import VueResizeSensor from '@seregpie/vue-resize-sensor';
-
-let app = createApp({/*...*/});
-app.component(VueResizeSensor.name, VueResizeSensor);
-app.mount('#app');
-```
-
-*or*
-
-Register the component locally.
-
-```javascript
-import VueResizeSensor from '@seregpie/vue-resize-sensor';
-
-export default {
-  components: {
-    [VueResizeSensor.name]: VueResizeSensor,
-  },
-  // ...
-};
-```
-
 ### browser
 
 ```html
@@ -61,6 +33,36 @@ export default {
 The component is globally available as `VueResizeSensor`.
 
 ## usage
+
+Register the component globally.
+
+```javascript
+import {createApp} from 'vue';
+import VueResizeSensor from '@seregpie/vue-resize-sensor';
+
+let app = createApp({/*...*/});
+app.component(VueResizeSensor.name, VueResizeSensor);
+app.mount('body');
+```
+
+*or*
+
+Register the component locally.
+
+```javascript
+import VueResizeSensor from '@seregpie/vue-resize-sensor';
+
+export default {
+  components: {
+    [VueResizeSensor.name]: VueResizeSensor,
+  },
+  // ...
+};
+```
+
+---
+
+Wrap the content inside the default slot.
 
 ```html
 <vue-resize-sensor
