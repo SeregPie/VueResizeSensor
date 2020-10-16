@@ -16,6 +16,12 @@ Works for Vue 2 & 3.
 npm i @seregpie/vue-resize-sensor
 ```
 
+---
+
+```js
+import VueResizeSensor from '@seregpie/vue-resize-sensor';
+```
+
 ### browser
 
 ```html
