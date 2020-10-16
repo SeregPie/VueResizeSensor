@@ -18,7 +18,7 @@ npm i @seregpie/vue-resize-sensor
 
 ---
 
-```js
+```javascript
 import VueResizeSensor from '@seregpie/vue-resize-sensor';
 ```
 
