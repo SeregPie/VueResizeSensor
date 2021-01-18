@@ -1,6 +1,6 @@
 # VueResizeSensor
 
-A container that supports the resize event.
+A Vue container that supports the resize event.
 
 Works for Vue 2 & 3.
 
