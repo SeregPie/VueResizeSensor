@@ -1,6 +1,6 @@
 # VueResizeSensor
 
-A container that supports the resize event. It contains an absolute positioned `<iframe>` element. An inline frame supports the resize event natively. Every time the container resizes, it triggers the resize event of the contained inline frame and the event handler of the inline frame triggers the resize event of the container.
+A container that supports the resize event.
 
 Works for Vue 2 & 3.
 
@@ -60,7 +60,7 @@ import VueResizeSensor from '@seregpie/vue-resize-sensor';
 
 export default {
   components: {
-    [VueResizeSensor.name]: VueResizeSensor,
+    VueResizeSensor,
   },
   // ...
 };
@@ -72,16 +72,13 @@ Wrap the content inside the default slot.
 
 ```html
 <vue-resize-sensor
-  style="
-    height: 100%;
-    width: 100%;
-  "
+  style="width: 100%; height: 100%"
   v-slot="{width, height}"
 >
   <my-header v-if="height > 400"/>
   <div
     :style="{flexDirection: (width > height) ? 'row' : 'column'}"
-    style="display: flex;"
+    style="display: flex"
   >
     <my-first-item/>
     <my-second-item/>
