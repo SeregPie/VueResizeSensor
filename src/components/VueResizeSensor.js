@@ -28,7 +28,7 @@ export default defineComponent({
 		});
 		let elRef = ref(null);
 		let updateSize = (() => {
-			let el = isVue2 ? refs.el : elRef.value;
+			let el = isVue2 ? refs['el'] : elRef.value;
 			if (el) {
 				widthRef.value = el.offsetWidth;
 				heightRef.value = el.offsetHeight;
@@ -55,10 +55,14 @@ export default defineComponent({
 						{
 							style: {
 								border: 'none',
-								height: '100%',
+								bottom: 0,
+								left: 0,
 								opacity: 0,
+								pointerEvents: 'none',
 								position: 'absolute',
-								width: '100%',
+								right: 0,
+								top: 0,
+								userSelect: 'none',
 							},
 							...(isVue2
 								? {
@@ -73,7 +77,7 @@ export default defineComponent({
 						},
 					),
 					...(() => {
-						let slot = slots.default;
+						let slot = slots['default'];
 						if (slot) {
 							let width = widthRef.value;
 							let height = heightRef.value;
