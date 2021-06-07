@@ -55,14 +55,12 @@ export default defineComponent({
 						{
 							style: {
 								border: 'none',
-								bottom: 0,
-								left: 0,
+								height: '100%',
 								opacity: 0,
 								pointerEvents: 'none',
 								position: 'absolute',
-								right: 0,
-								top: 0,
 								userSelect: 'none',
+								width: '100%',
 							},
 							...(isVue2
 								? {
